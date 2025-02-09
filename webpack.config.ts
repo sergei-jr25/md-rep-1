@@ -3,10 +3,15 @@ import {
 	TypeMode,
 	TypePLatform,
 	buldWebpack,
-} from '@packages/build-config'
+} from '@sergeri-jr25/build-config'
+// import {
+// 	IBuildPaths,
+// 	TypeMode,
+// 	TypePLatform,
+// 	buldWebpack,
+// } from '@packages/build-config'
 import path from 'path'
 import webpack from 'webpack'
-
 import PackageJson from './package.json'
 
 interface IEnvVariable {
@@ -39,7 +44,14 @@ export default (env: IEnvVariable) => {
 			name: 'admin',
 			filename: 'remoteEntry.js',
 			exposes: {
-				'./Router': '/src/components/router/Router.tsx',
+				// './Router': '/src/components/router/Router.tsx',
+				'./Router': path.resolve(
+					__dirname,
+					'src',
+					'components',
+					'router',
+					'Router.tsx'
+				),
 			},
 			shared: {
 				...PackageJson.devDependencies,
