@@ -50,15 +50,15 @@ export default (env: IEnvVariable) => {
 			shared: {
 				...PackageJson.devDependencies,
 				react: {
-					singelton: true,
+					singleton: true,
 					requiredVersion: PackageJson.dependencies['react'],
 				},
 				'react-router-dom': {
-					singelton: true,
+					singleton: true,
 					requiredVersion: PackageJson.dependencies['react-router-dom'],
 				},
 				'react-dom': {
-					singelton: true,
+					singleton: true,
 					requiredVersion: PackageJson.dependencies['react-dom'],
 				},
 			},
