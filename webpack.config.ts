@@ -38,14 +38,8 @@ export default (env: IEnvVariable) => {
 			name: 'admin',
 			filename: 'remoteEntry.js',
 			exposes: {
-				'./Router': '/src/components/router/Router.tsx',
-				// './Router': path.resolve(
-				// 	__dirname,
-				// 	'src',
-				// 	'components',
-				// 	'router',
-				// 	'Router.tsx'
-				// ),
+				'./Router': '/src/components/App.tsx',
+				// './Router': '/src/components/router/Router.tsx',
 			},
 			shared: {
 				...PackageJson.devDependencies,
